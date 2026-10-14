@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><title>Opsi YDM</title>
+<style>body{font-family:"Segoe UI",system-ui,sans-serif;max-width:520px;margin:24px auto;padding:0 16px}label{display:block;margin:14px 0;font-size:14px}input{margin-top:6px;padding:8px;width:160px}button{padding:8px 14px;background:#2f6fed;color:#fff;border:0;border-radius:8px;font-weight:600;cursor:pointer}</style></head>
+<body>
+<h1>Opsi Yukii Download Manager</h1>
+<label><input type="checkbox" id="intercept" style="width:auto"> Alihkan unduhan browser ke YDM secara otomatis</label>
+<label>Ukuran minimum untuk dialihkan (MB):<br><input type="number" id="minSizeMB" min="0" step="1"></label>
+<button id="save">Simpan</button> <span id="st"></span>
+<script>
+const i1=document.getElementById("intercept"), i2=document.getElementById("minSizeMB");
+chrome.storage.local.get({intercept:true,minSizeMB:1}).then(d=>{i1.checked=!!d.intercept;i2.value=d.minSizeMB;});
+document.getElementById("save").addEventListener("click",()=>{
+ chrome.storage.local.set({intercept:i1.checked,minSizeMB:Math.max(0,parseInt(i2.value||"0",10))})
+ .then(()=>document.getElementById("st").textContent="Tersimpan.");});
+</script>
+</body></html>

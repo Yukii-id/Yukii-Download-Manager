@@ -1,0 +1,49 @@
+{
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Yukii Download Manager"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "description": "Alihkan unduhan browser ke Yukii Download Manager (multi-segmen, pause/resume).",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png"
+  },
+  "manifest_version": 3,
+  "name": "Yukii Download Manager",
+  "options_page": "options.html",
+  "permissions": [
+    "downloads",
+    "contextMenus",
+    "nativeMessaging",
+    "storage",
+    "cookies",
+    "notifications",
+    "scripting"
+  ],
+  "version": "1.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://youtube.com/*",
+        "*://m.youtube.com/*",
+        "*://music.youtube.com/*"
+      ],
+      "js": [
+        "youtube.js"
+      ],
+      "css": [
+        "youtube.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

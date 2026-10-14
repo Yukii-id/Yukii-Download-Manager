@@ -1,0 +1,9 @@
+.ydm-wrap{display:inline-flex;flex-direction:column;gap:8px;margin-left:8px;position:relative;vertical-align:top}
+.ydm-btn{background:#2f6fed;color:#fff;border:0;border-radius:18px;padding:0 16px;height:36px;font-size:14px;font-weight:600;cursor:pointer;font-family:Roboto,Arial,sans-serif}
+.ydm-btn:hover{background:#245bcc}
+.ydm-panel{position:absolute;top:44px;right:0;z-index:2200;background:#fff;color:#0f0f0f;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.25);padding:12px;min-width:210px}
+html[dark] .ydm-panel{background:#282828;color:#f1f1f1}
+.ydm-panel-title{font-size:13px;font-weight:600;margin-bottom:8px}
+.ydm-q{display:inline-block;margin:0 6px 6px 0;padding:6px 12px;border-radius:16px;border:1px solid #ccc;background:transparent;color:inherit;font-size:13px;cursor:pointer}
+.ydm-q:hover{border-color:#2f6fed;color:#2f6fed}
+.ydm-status{font-size:12px;margin-top:4px;min-height:16px}

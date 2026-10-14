@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<style>
+body{font-family:"Segoe UI",system-ui,sans-serif;width:300px;margin:0;padding:14px;background:#fff;color:#111}
+h1{font-size:14px;margin:0 0 4px} p{font-size:12px;color:#555;margin:4px 0 10px}
+input{width:100%;box-sizing:border-box;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:12px}
+button{margin-top:8px;width:100%;padding:8px;border:0;border-radius:8px;background:#2f6fed;color:#fff;font-weight:600;cursor:pointer}
+label{font-size:12px;display:flex;gap:6px;align-items:center;margin-top:10px}
+#st{font-size:12px;margin-top:8px;color:#2f6fed}
+</style></head>
+<body>
+<h1>Yukii Download Manager</h1>
+<p>Tempel URL untuk mengunduh lewat YDM (multi-segmen, bisa pause/resume).</p>
+<input id="url" type="url" placeholder="https://...">
+<button id="add">Unduh dengan YDM</button>
+<label><input type="checkbox" id="intercept" style="width:auto"> Alihkan unduhan browser otomatis</label>
+<div id="st"></div>
+<script src="popup.js"></script>
+</body></html>

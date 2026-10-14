@@ -1,0 +1,4 @@
+# Opsional: aktifkan dukungan BitTorrent/magnet secara penuh.
+# Jika wheel untuk versi Python kamu tidak tersedia, fitur HTTP tetap jalan;
+# hanya torrent yang menampilkan pesan bahwa libtorrent belum terpasang.
+libtorrent>=2.0
